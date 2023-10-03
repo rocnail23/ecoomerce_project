@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Teko:wght@300;400;600&family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap');
+
+:root{
+  --gray-color: #ccd1d1;
+}
+
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+button{
+  border: none;
+}
+
+.btn-input{
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+}
+
+.btn-black{
+ background-color: black;
+ color: white;
+ transition: all 300ms ease;
+ cursor: pointer;
+}
+
+.btn-black:hover{
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid black;
+ }
+
+
+
