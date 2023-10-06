@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem 0rem 5rem;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+}
+
+nav > h1 {
+    font-family: 'Titillium Web', sans-serif; ;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+nav > h1 > span {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 2.2rem;
+
+}

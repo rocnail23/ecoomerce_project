@@ -8,6 +8,8 @@
   margin: 0px;
   box-sizing: border-box;
   padding: 0px;
+  font-family: 'Teko', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -19,6 +21,7 @@ img{
 
 button{
   border: none;
+  background-color: transparent;
 }
 
 .btn-input{

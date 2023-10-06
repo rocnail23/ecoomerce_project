@@ -14,8 +14,8 @@ export const Login = ({changeForm}:Props) => {
   return (
     <div className="register" >
         <div className="register_welcome">
-        <h1>Welcome Back</h1>
-        <span>La mejor manera de vestir</span>
+        <h1>Welcome Back styleCrash</h1>
+        <span>the best way of dress</span>
         </div>
         <div className='register_form'>
             <form>

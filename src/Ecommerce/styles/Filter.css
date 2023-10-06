@@ -1,0 +1,22 @@
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    width: 40%;
+    margin-left: 20rem;
+}
+
+.filter_input{
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid;
+    outline: none;
+    padding: 1px;
+}
+
+@media (max-width:768px) {
+    .filter{
+        margin-left: 5rem;
+    }
+}
