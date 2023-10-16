@@ -1,0 +1,52 @@
+.card{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+}
+
+.card_content{
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+    background-color: var(--gray-color);
+    height: 30%;
+   
+}
+
+.card_t-p{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card_image {
+  height: 70%;
+  width: 70%;
+  display: block;
+  background-color: red;
+  transition: scale 0.3s ease;
+}
+
+.card_image:hover{
+    scale: 1.03;
+}
+
+.card_title{
+    align-self: baseline;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card_price{
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: green;
+   align-self: center;
+}
+
+.card_description{
+    font-size: .9rem;
+}
+
+
+

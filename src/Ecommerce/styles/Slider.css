@@ -1,27 +1,13 @@
-ul,
-li {
-  list-style: none;
-  white-space: nowrap;
-}
-
-li {
-  display: inline;
-}
-
-img {
-  margin-top: -16px;
-}
-
-/* Main container */
 
 .main-container {
- 
-  height: 100%;
-  border: 1px solid black;
+  height: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 auto;
-  grid-area: 1/2/3/2;
-
 }
+
+
+
 
 /* Slider container */
 .slider-container {
@@ -42,36 +28,17 @@ img {
   text-align: center;
 }
 
-/* Arrows */
-.leftArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: black;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.rightArrow {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: black;
-  z-index: 1;
-  cursor: pointer;
-}
 
 .container-images {
   width: 100%;
   height: 100%;
-  border: 1px solid #eee;
+  opacity: 0;
   overflow: hidden;
+  transition: 1s;
+}
+
+.showImage {
+  opacity: 1;
 }
 
 div.active {

@@ -1,31 +1,59 @@
-
-import "../styles/Slider.css"
-
 import { ImageCarrou as data } from "../../assets/data"
-
-
-import React, { useEffect, useRef, useState } from 'react'
+import  { useEffect, useRef, useState, } from 'react'
+import { SliderImg } from './SliderImg';
+import "../styles/Slider.css"
 
 
 export const Slider = () => {
-  const listRef = useRef();
+
+  const [changing, setChangin] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showImage, setShowImage] = useState(false)
+  const interval = useRef<number>()
+  const timeOut = useRef<number>()
+  
 
 
+  
+  
+
+  
+  
   useEffect(() => {
-    const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+   
+   clearInterval(interval.current) 
+   clearTimeout(timeOut.current) 
+   interval.current = setInterval(() => {
+      setShowImage(false)
+      const isLastSlide = currentIndex === data.length - 1;
 
-    if (imgNode) {
-      imgNode.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
+     timeOut.current = setTimeout(() => {
+        if (!isLastSlide) { 
+          setCurrentIndex(curr => curr + 1);
+       
+        }else{
+          setCurrentIndex(0)
+          
+        }
+        
+      },500)
+      
+    },5000)
 
-  }, [currentIndex]);
+    
 
+   
+  },[currentIndex])
 
-  const scrollToImage = (direction) => {
+  const changeShowImage = () => {
+    setShowImage(true)
+  }
+
+  const scrollToImage = (direction:string) => {
+    if(changing) return
+    setChangin(true)
+    setShowImage(false)
+   setTimeout(() => {
     if (direction === 'prev') {
       setCurrentIndex(curr => {
         const isFirstSlide = currentIndex === 0;
@@ -35,29 +63,28 @@ export const Slider = () => {
       const isLastSlide = currentIndex === data.length - 1;
       if (!isLastSlide) {
         setCurrentIndex(curr => curr + 1);
+      }else{
+        setCurrentIndex(0)
       }
     }
+    setChangin(false)
+   },500)
+   
   }
 
-  const goToSlide = (slideIndex) => {
+  
+
+  const goToSlide = (slideIndex:number) => {
     setCurrentIndex(slideIndex);
   }
-
+  
   return (
     <div className="main-container">
       <div className="slider-container">
-        <div className='leftArrow' onClick={() => scrollToImage('prev')}>&#10092;</div>
-        <div className='rightArrow' onClick={() => scrollToImage('next')}>&#10093;</div>
-        <div className="container-images">
-          <ul ref={listRef}>
-            {
-              data.map((item) => {
-                return <li key={item.id}>
-                  <img src={item.img} style={{height:"500px"}}  />
-                </li>
-              })
-            }
-          </ul>
+        <div className='btn-leftArrow' onClick={() => scrollToImage('prev')}>&#10092;</div>
+        <div className='btn-rightArrow' onClick={() => scrollToImage('next')}>&#10093;</div>
+        <div className={`container-images ${showImage && "showImage"}`}>     
+                 <SliderImg img={data[currentIndex]?.img} changeShowImage={changeShowImage}/>
         </div>
         <div className="dots-container">
           {

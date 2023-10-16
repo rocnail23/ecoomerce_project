@@ -8,15 +8,28 @@ nav {
     position: fixed;
     width: 100%;
     margin: auto;
+    transition: all 0.3s ease;
+    background-color: white;
+    z-index: 1000;
 }
 
-nav > h1 {
+nav.noShow{
+    top: -80px
+}
+
+.title{
+    margin-bottom: 10px;
+}
+
+.title > h1 {
     font-family: 'Titillium Web', sans-serif; ;
     font-weight: lighter;
     font-size: 2rem;
+    align-self: flex-end;
+   
 }
 
-nav > h1 > span {
+.title > h1 > span {
     font-family: inherit;
     font-weight: bold;
     font-size: 2.2rem;

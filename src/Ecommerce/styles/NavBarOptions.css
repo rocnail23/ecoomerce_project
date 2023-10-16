@@ -1,4 +1,23 @@
 .navOptions {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
+}
+
+
+.sex{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-left: 2rem;
+    align-self: center;
+   
+}
+
+.sex > button > p {
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: end;
 }

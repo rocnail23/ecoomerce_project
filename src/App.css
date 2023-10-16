@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Teko:wght@300;400;600&family=Titillium+Web:ital,wght@0,300;0,700;1,400&display=swap');
 
 :root{
-  --gray-color: #ccd1d1;
+  --gray-color: rgb(244,244,245);
 }
 
 *{
@@ -11,12 +11,24 @@
   font-family: 'Teko', sans-serif;
   font-family: 'Titillium Web', sans-serif;
   font-family: 'Nunito', sans-serif;
+  
+}
+
+.titi{
+  font-family: 'Titillium Web', sans-serif;
+}
+.teko{
+  font-family: 'Teko', sans-serif;
+}
+
+.shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 img{
   width: 100%;
-  height: 100%;
+
 }
 
 button{
@@ -24,11 +36,54 @@ button{
   background-color: transparent;
 }
 
+.btn-hover {
+  transition: scale 0.100s ease;
+}
+
+.btn-hover:hover{
+  scale: 1.1;
+}
+
+/* Arrows */
+.btn-leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn-rightArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 50px;
+  font-weight: 700;
+  color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn-gray{
+  background-color: white;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .btn-input{
   display: block;
   width: 100%;
   height: 35px;
   margin-top: 20px;
+ 
 }
 
 .btn-black{
@@ -43,6 +98,12 @@ button{
   color: black;
   border: 1px solid black;
  }
+
+ .bg-g{
+   background-color: var(--gray-color);
+ }
+
+ 
 
 
 

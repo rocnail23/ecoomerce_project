@@ -1,18 +1,29 @@
+.filter_title{
+    font-size: 2rem;
+}
+
 .filter{
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    width: 40%;
-    margin-left: 20rem;
+    padding:  0.2rem 0.5rem;
+    width: 100%;
+    background-color: var(--gray-color);
+    border-radius: 10px ;
+    margin-bottom: 4rem;
+}
+
+.filter > button{
+    cursor: pointer;
 }
 
 .filter_input{
-    border-radius: 5px;
     width: 100%;
-    max-width: 350px;
-    border: 1px solid;
+    height: 40px;
+    background-color: var(--gray-color);
     outline: none;
-    padding: 1px;
+    border: none;
+    font-size: 0.9rem;
 }
 
 @media (max-width:768px) {
