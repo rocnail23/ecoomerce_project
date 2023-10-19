@@ -5,10 +5,11 @@ import { useSliderC } from "../hooks/useSliderC";
 
 interface Props{
   children: JSX.Element[],
-  gap?:"5px"| "10px" | "15px" | "20px" | string 
+  gap?:"5px"| "10px" | "15px" | "20px" | string,
+  className?: string
 }
 
-export const SliderComponents = ({children,gap}:Props) => {
+export const SliderComponents = ({children,gap,className}:Props) => {
 
  const {takeWidth,handleNext,handlePrev,container,item} = useSliderC()
  useLayoutEffect(() => {
@@ -20,7 +21,7 @@ export const SliderComponents = ({children,gap}:Props) => {
  })
 
   return (
-    <div className='sliderComponent'>
+    <div className={`sliderComponent ${className}`}>
       <h2 className="sub_title">sweaters</h2>
        <div className='btn-leftArrow btn-gray' onClick={handlePrev}>&#10092;</div>
       <div onClick={() => handleNext(sweeters)} className='btn-rightArrow btn-gray'>&#10093;</div>

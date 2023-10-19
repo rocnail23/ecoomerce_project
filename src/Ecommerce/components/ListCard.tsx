@@ -1,16 +1,17 @@
 
-import { sweeters } from '../../assets/data'
 import { Card } from './Card'
 import "../styles/ListCard.css"
 
-const card = [
-    ...sweeters,
-]
 
-export const ListCard = () => {
+
+interface Props {
+  products: Product[]
+}
+
+export const ListCard = ({products}:Props) => {
   return (
-    <div className='listCard'>
-        {card.map((value) => (
+    <div className='listCard animate__animated animate__fadeIn'>
+        {products.map((value) => (
             <Card 
             product={value}
              className='bg-g'/>

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router"
 import "../styles/Card.css"
 
 
@@ -10,7 +11,7 @@ interface Props {
 
 export const Card = ({product,className}: Props) => {
  
-    const {description,img,price,title} = product
+    const {description,img,price,title,id} = product
 
     const shortDescription = () => {
 
@@ -21,9 +22,11 @@ export const Card = ({product,className}: Props) => {
         }
 
     }
+    
+    const navigate = useNavigate()
  
     return (
-        <div className={`card ${className}`}>
+        <div onClick={() => navigate(`/product/${id}`)} className={`card ${className}`}>
         <img className="card_image" src={img[0]} alt="" />
         <div className="card_content">
         <div className="card_t-p">

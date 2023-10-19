@@ -1,0 +1,54 @@
+.productPage{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    border-bottom: 1px solid gray;
+    padding-bottom: 2rem;
+}
+
+.productPage_images{
+    width: 35%;
+    display: flex;
+    height: 65vh;
+    gap: 10px;
+    
+}
+
+.productPage_info{
+    width: 40%;
+}
+
+.productPage_info > h2{
+    font-size: 2rem;
+}
+.productPage_info > h3{
+    font-size: 1.50rem;
+    color: gray;
+}
+
+.productPage_btn{
+    background-color: green;
+    color: white;
+    margin-top: 1rem;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 1.50rem;
+    transition: all .3s ease;
+}
+
+.productPage_btn:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+
+}
+
+.productPage_other{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.productPage_other > h3 {
+    font-size: 2rem;
+}

@@ -1,0 +1,32 @@
+.imageCard_listImage{
+   width: 25%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.imageCard_listImage > div {
+   height: calc(25% - 5px);
+}
+
+.imageCard_listImage > div > img {
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+
+.imageCard_listImage > div:hover {
+    border: 3px rgb(128, 128, 128,0.5) solid;
+    
+}   
+
+.imageCard_image{
+ width: 85%;
+ border: 1px solid black;
+}
+
+.imageCard_image > img{
+    height: 100%;
+   }

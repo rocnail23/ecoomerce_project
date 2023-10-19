@@ -19,7 +19,7 @@ export const Register = ({changeForm}:Props) => {
 
     console.log(form)
   return (
-    <div className="register" >
+    <div className="register animate__animated animate__fadeIn" >
         <div className="register_welcome">
         <h1>Welcome to styleCrash</h1>
         <span>the best way of dress</span>

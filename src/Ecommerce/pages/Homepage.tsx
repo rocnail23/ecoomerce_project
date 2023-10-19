@@ -39,7 +39,7 @@ const HomePage = () => {
           </div>
         </div>
         </section>
-        <SliderComponents gap="20px"> 
+        <SliderComponents gap="20px" className="m-b4"> 
             {sweeters.map(value=> (
               <Card 
               product={value}

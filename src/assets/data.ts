@@ -8,6 +8,10 @@ import dress from "../assets/cardigan.webp"
 import dress1 from "../assets/cardigan1.webp"
 import dress3 from "../assets/sweter.webp"
 
+import arabasse from "../assets/anrabasse.jpg"
+import arabasse2 from "../assets/anrabasse2.jpg"
+import arabasse3 from "../assets/anrabasse4.jpg"
+
 export const ImageCarrou = [
     
    {
@@ -41,7 +45,7 @@ export const sweeters: Product[] = [
       title: "Cardigan",
       price: 59.66,
       description: "Caracilia Women's Oversized Knitted Cardigan Open Front Long Sleeve Lapel Casual Coat Fall 2023 Elegant Coat",
-      img: [dress]
+      img: [dress,arabasse,arabasse2,arabasse3]
    }, 
    {
       id: 2,

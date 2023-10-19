@@ -12,7 +12,7 @@ export const Login = ({changeForm}:Props) => {
   const {handleChange,email,password} = useForm<Login>(LoginValues)
   
   return (
-    <div className="register" >
+    <div className="register animate__animated animate__fadeIn" >
         <div className="register_welcome">
         <h1>Welcome Back styleCrash</h1>
         <span>the best way of dress</span>
