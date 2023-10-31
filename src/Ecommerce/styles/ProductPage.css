@@ -27,22 +27,7 @@
     color: gray;
 }
 
-.productPage_btn{
-    background-color: green;
-    color: white;
-    margin-top: 1rem;
-    width: 30%;
-    border-radius: 10px;
-    font-size: 1.50rem;
-    transition: all .3s ease;
-}
 
-.productPage_btn:hover{
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-
-}
 
 .productPage_other{
     width: 100%;
@@ -51,4 +36,11 @@
 
 .productPage_other > h3 {
     font-size: 2rem;
+}
+
+.productPage_btn_add{
+    width: 30%;
+    height: 30px;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
 }

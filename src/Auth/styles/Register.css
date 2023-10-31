@@ -13,8 +13,9 @@
 }
 
 .register_welcome span {
- color: var(--gray-color);
- font-size: 1.2rem;
+ color:black;
+ font-size: 1.5rem;
+ font-weight: 400;
  
 }
 
@@ -25,13 +26,28 @@
 
 .sign_option{
   margin-top: 2rem;
-  color: var(--gray-color);
+  color: black;
 }
 
 .sign_option span{
     color: black;
     font-weight: 800;
     cursor: pointer;
+}
+
+.btn_register-back{
+   color: white;
+   background-color: black;
+   width: 40%;
+   margin: 0rem auto;
+   height: 40px;
+   font-size: 1rem;
+   transition: scale .2 ease;
+}
+
+.btn_register-back:hover{
+  cursor: pointer;
+  scale: 1.01;
 }
 
 @media  (max-width: 768px) {

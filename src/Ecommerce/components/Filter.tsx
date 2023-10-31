@@ -1,12 +1,12 @@
-import { useForm } from "../../hooks"
+
 import "../styles/Filter.css"
 
 export const Filter = () => {
 
-    const {handleChange,form} = useForm({})
+   
 
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-        console.log(form,e)
+        console.log(e)
 
     }
 
@@ -23,7 +23,7 @@ export const Filter = () => {
         type="text"
         className="filter_input"
         name="search"
-        onChange={handleChange} 
+        
         placeholder="enter search term"/>
         <button>cancel</button>
     </form>

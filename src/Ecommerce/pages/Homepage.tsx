@@ -12,7 +12,9 @@ import { sweeters } from "../../assets/data"
 import { Card } from "../components/Card"
 
 
+
 const HomePage = () => {
+  
   return (
     <>
     
@@ -24,7 +26,7 @@ const HomePage = () => {
         </div>
         </div> 
         <section >
-          <h2 className="sub_title m-l">New Styles</h2>
+          <h2 className="home_subtitle m-l">New Styles</h2>
         <div className="bg-s1">
           <img src={s1} alt="" />
           <img src={s2} alt="" />
@@ -42,6 +44,7 @@ const HomePage = () => {
         <SliderComponents gap="20px" className="m-b4"> 
             {sweeters.map(value=> (
               <Card 
+              key={value.id}
               product={value}
               className="shadow"/>
             ))}
@@ -63,6 +66,7 @@ const HomePage = () => {
         <SliderComponents gap="20px"> 
             {sweeters.map(value=> (
               <Card 
+              key={value.id}
               product={value}
               className="shadow"/>
             ))}

@@ -1,0 +1,20 @@
+.cartPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.cartPage > hr{
+ width: 100%;
+}
+
+.cartPage > h3 {
+    align-self: self-start;
+}
+
+
+.info_cart{
+font-size: 2rem;
+}

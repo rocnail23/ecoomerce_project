@@ -1,12 +1,14 @@
 import './App.css'
 import RouterApp from './router/RouterApp'
 
+
+
 function App() {
+
+  
+    return <RouterApp/>
   
 
-  return (
-    <RouterApp/>
-  )
 }
 
 export default App

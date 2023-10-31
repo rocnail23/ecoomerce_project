@@ -1,0 +1,8 @@
+.userRouter{
+    height: calc(100vh - 100px);
+    width: calc(100% - 100px);
+    border-radius: 1rem;
+    background-color: var(--gray-color);
+    padding: 1rem;
+    position: relative;
+}

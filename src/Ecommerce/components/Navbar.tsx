@@ -1,3 +1,4 @@
+import {  Link  } from "react-router-dom";
 import "../styles/NavBar.css"
 import NavbarOptions from './NavbarOptions';
 import {useState,useRef} from 'react';
@@ -6,8 +7,8 @@ import {useState,useRef} from 'react';
 export const Navbar = () => {
 
   const [show, setShow] = useState<boolean>(false)
-  let principalPosition = useRef<number>(window.pageYOffset)
-  let position = useRef<number>()
+  const principalPosition = useRef<number>(window.pageYOffset)
+  const position = useRef<number>()
   
   window.addEventListener("scroll", () => {
       position.current = window.pageYOffset
@@ -23,7 +24,7 @@ export const Navbar = () => {
   return (
     <nav className={show ? "noShow": ""}>
       <div className="title">
-      <h1>Style<span>Crash</span></h1>
+      <Link className="link" to="/"><h1 className="title_h1">Style<span>Crash</span></h1></Link>
       </div>
     <div className="sex">
      <button className="btn-hover">

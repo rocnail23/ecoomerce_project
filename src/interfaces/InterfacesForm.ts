@@ -1,19 +1,19 @@
-interface Login {
+export interface Login {
     password: string,
     email: string
 }
 
 
-interface Register {
+export interface Register {
     name: string,
     email: string,
     password: string,
-    password2: string
+    password2?: string
 }
 
 
 
-interface Product {
+export interface Product {
 
  id: number,
  price: number,
@@ -21,4 +21,22 @@ interface Product {
  description: string,
  img:string[]
 
+}
+
+
+export interface ProductCart{
+    product: Product,
+    quantity: number
+}
+
+export interface User {
+    name?:string,
+    email?:string,
+    valid?: boolean,
+    role?: "admin" | "user"
+}
+
+export interface Message {
+    message?: string,
+    category?: string
 }

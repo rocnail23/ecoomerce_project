@@ -9,15 +9,8 @@ export const Slider = () => {
   const [changing, setChangin] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(false)
-  const interval = useRef<number>()
-  const timeOut = useRef<number>()
-  
-
-
-  
-  
-
-  
+  const interval = useRef<NodeJS.Timeout>()
+  const timeOut = useRef<NodeJS.Timeout>()
   
   useEffect(() => {
    
@@ -48,7 +41,7 @@ export const Slider = () => {
   const changeShowImage = () => {
     setShowImage(true)
   }
-
+  
   const scrollToImage = (direction:string) => {
     if(changing) return
     setChangin(true)

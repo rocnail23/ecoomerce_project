@@ -38,6 +38,7 @@ button{
 
 .btn-hover {
   transition: scale 0.100s ease;
+  cursor: pointer;
 }
 
 .btn-hover:hover{
@@ -69,6 +70,16 @@ button{
   cursor: pointer;
 }
 
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+
 .btn-gray{
   background-color: white;
   border-radius: 50%;
@@ -97,10 +108,17 @@ button{
   background-color: #ffffff;
   color: black;
   border: 1px solid black;
+  cursor: pointer;
  }
 
  .bg-g{
    background-color: var(--gray-color);
+ }
+
+ .container_loader{
+  height: 100vh;
+  display: grid;
+  grid:center
  }
 
  footer{
@@ -127,4 +145,22 @@ button{
   margin-bottom: 4rem;
 }
 
+.m-b2{
+  margin-bottom: 2rem;
+}
 
+
+.link{
+  color: black;
+  text-decoration: none;
+}
+
+.title_3{
+  font-size: 2rem;
+
+}
+
+.sub_title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}

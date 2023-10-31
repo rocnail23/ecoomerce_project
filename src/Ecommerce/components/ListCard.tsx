@@ -1,21 +1,18 @@
 
 import { Card } from './Card'
 import "../styles/ListCard.css"
+import { Product } from '../../interfaces/InterfacesForm'
 
 
 
 interface Props {
-  products: Product[]
+  children: JSX.Element[] | JSX.Element
 }
 
-export const ListCard = ({products}:Props) => {
+export const ListCard = ({children}:Props) => {
   return (
     <div className='listCard animate__animated animate__fadeIn'>
-        {products.map((value) => (
-            <Card 
-            product={value}
-             className='bg-g'/>
-        ))}
+       {children}
     </div>
   )
 }

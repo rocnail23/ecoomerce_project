@@ -1,8 +1,10 @@
 .listCart{
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 200px) );
     grid-auto-rows: 170px;
     gap: 8px;
     margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
     
 }

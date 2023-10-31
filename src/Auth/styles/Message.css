@@ -1,0 +1,18 @@
+.message{
+    position: fixed;   
+    right: 20px;
+    bottom: 20px;
+    min-width: 200px;  
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: 600;
+    z-index: 15000;
+}
+
+.primary_alert{
+    background-color: rgb(142, 250, 142);
+}
+
+.secondary_alert{
+    background-color: rgb(252, 140, 140);
+}

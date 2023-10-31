@@ -6,13 +6,31 @@
     background-color: white;
     padding-top: 0.5rem;
     cursor: pointer;
+    position:relative;
+    transition: opacity .3s ease;
+}
+
+.card_vanish{
+    opacity: 0;
+}
+
+.card_circle-heart{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .card_content{
     padding: 0.5rem .5rem 0.5rem 0.5rem;
     background-color: var(--gray-color);
     height: 30%;
-   
+    position: relative;
 }
 
 .card_t-p{
@@ -49,5 +67,14 @@
     font-size: .9rem;
 }
 
+.card_btnAdd{
+    align-self: flex-end;
+    width: 30%;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
 
 

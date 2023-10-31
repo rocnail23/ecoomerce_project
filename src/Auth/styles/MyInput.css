@@ -1,0 +1,24 @@
+.myInput{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+}
+
+.myInput > input{
+    border: 1px solid  rgb(220, 219, 219);
+    padding: 1px 5px; 
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.myInput > label{
+    align-self: flex-start;
+}
+
+.errorComponent {
+    background-color: rgb(166, 152, 255);
+    color: white;
+    padding: 2px;
+
+}

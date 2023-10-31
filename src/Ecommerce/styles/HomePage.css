@@ -85,13 +85,14 @@
   border: 1px solid black;
   color: black;
   background-color: white;
+  cursor: pointer;
 }
 
 .shop{
   padding: 0rem 6rem !important;
 }
 
-.sub_title{
+.home_subtitle{
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 0.5rem;

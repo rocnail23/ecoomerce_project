@@ -12,6 +12,14 @@ import arabasse from "../assets/anrabasse.jpg"
 import arabasse2 from "../assets/anrabasse2.jpg"
 import arabasse3 from "../assets/anrabasse4.jpg"
 
+import raya from "../assets/raya1.jpg"
+import raya2 from "../assets/raya2.jpg"
+import raya3 from "../assets/raya3.jpg"
+
+import lilu from "../assets/lilu.jpg"
+import lilu2 from "../assets/lilu2.jpg"
+import lulu3 from "../assets/lilu3.jpg"
+
 export const ImageCarrou = [
     
    {
@@ -52,14 +60,14 @@ export const sweeters: Product[] = [
       title: "ANRABESS",
       description: "ANRABESS Women's Oversized Turtleneck Sweater Long Batwing Sleeve Asymmetrical Hem Knitted Tunic Pullover Casual Buttonless Sweater",
       price: 60.22,
-      img: [dress1]
+      img: [dress1,raya,raya2,raya3]
    },
    {
       id:3,
       title: "Sweater",
       description: "2023 Women's Long Sleeve Striped Button Down Sweater Open Coat with Pockets",
       price: 20.00,
-      img: [dress3]
+      img: [dress3,lilu,lilu2,lulu3]
    },
    {  
       id: 4,
@@ -123,6 +131,41 @@ export const sweeters: Product[] = [
       description: "2023 Women's Long Sleeve Striped Button Down Sweater Open Coat with Pockets",
       price: 20.00,
       img: [dress3]
+   }
+
+
+]
+
+export const sideOptions = [
+
+   {
+      id:1,
+      icon: "bx bx-user-circle",
+      text: "user",
+      path: "/user/info"
+   },
+   {
+      id:2,
+      icon: "bx bxs-heart-circle",
+      text: "wishes",
+      path: "/user/wishes"
+   },
+   {
+      id:3,
+      icon: "bx bxs-cart",
+      text: "cart",
+      path: "/user/cart"
+   },
+   {
+      id:4,
+      icon: "bx bxs-shopping-bag",
+      text:"purcharses",
+      path: "/user/purchases"
+   },
+   {
+     id:5,
+     icon:  "bx bxs-moon",
+     text: "darkMode"
    }
 
 

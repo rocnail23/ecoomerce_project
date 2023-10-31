@@ -35,27 +35,6 @@
     align-items: center;
 }
 
-.formGroup{
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-
-  }
-
-.formGroup label {
-    align-self: baseline;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-} 
-
-.formGroup input {
-    height: 30px;
-    outline: none;
-    border: 0.1px solid #ccd1d1;
-    padding: 3px;
-    font-size: 1rem;
-}
 
 
 @media (max-width:768px) {
@@ -83,11 +62,6 @@
     .form_container_img{
        display: none;
     }
-
-    .formGroup input {
-        height: 25px;
-    }
-
    
 }
 

@@ -21,15 +21,18 @@ nav.noShow{
     margin-bottom: 10px;
 }
 
-.title > h1 {
+
+
+.title_h1 {
     font-family: 'Titillium Web', sans-serif; ;
     font-weight: lighter;
     font-size: 2rem;
     align-self: flex-end;
+
    
 }
 
-.title > h1 > span {
+.title_h1 > span {
     font-family: inherit;
     font-weight: bold;
     font-size: 2.2rem;

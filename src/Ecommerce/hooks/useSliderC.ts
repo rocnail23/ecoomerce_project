@@ -1,4 +1,5 @@
 import {useRef,useState} from 'react';
+import { Product } from '../../interfaces/InterfacesForm';
 
 
 export const useSliderC = () => {
@@ -17,6 +18,7 @@ export const useSliderC = () => {
        }
          
  const takeWidth = () => {
+    if(!item.current) return
     width.current = item.current!.offsetWidth 
     console.log("resize")
  }
@@ -26,9 +28,7 @@ export const useSliderC = () => {
      console.log(itemsInWindow)  
      const items = array.length -  itemsInWindow
      const maxValue = items * width.current! 
-     console.log(maxValue)
      const translate = (currentIndex + 1) * width.current! 
-     console.log(maxValue)
     if(maxValue < translate) return
      setCurrentIndex(value => value + 1)
      container.current!.style.transform = `translateX(-${translate}px)`
