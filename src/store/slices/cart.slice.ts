@@ -14,7 +14,7 @@ interface CartState {
 const initialState: CartState = {
   isOpen: false,
   productInCart: {},
-  priceCart: 0.00
+  priceCart: 20.00
 }
 
 

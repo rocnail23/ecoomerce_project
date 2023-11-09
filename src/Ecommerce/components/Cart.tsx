@@ -1,9 +1,9 @@
-import { getPrice } from "../../store/slices/cart.slice";
 import useCart from "../hooks/useCart"
 import "../styles/Cart.css"
 import { ButtonPurchase } from "./ButtonPurchase"
 import { ListCart } from "./ListCart"
 import { useEffect } from 'react';
+import { PaypalButton } from "./PaypalButtons";
 
 
 
@@ -13,7 +13,7 @@ export const Cart = () => {
   const {isOpen,switchCard,priceCart,getMount,productInCart} = useCart()
 
   useEffect(() => {
-      getMount()
+     getMount()
   },[productInCart])
 
   return (
@@ -25,6 +25,7 @@ export const Cart = () => {
     <h3 className="teko">priceCart: {priceCart}<span className="cart_price_mount teko">$</span></h3>
    </div>
    <ButtonPurchase width="80%"/>
+   <PaypalButton/>
     </div>
     
   )
