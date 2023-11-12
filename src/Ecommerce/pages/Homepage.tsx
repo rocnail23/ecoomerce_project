@@ -1,6 +1,4 @@
 import { Slider } from "../components/Slider"
-import hombre from "../../assets/hombre1.webp"
-import hombre2 from "../../assets/hombre2.webp"
 import "../styles/HomePage.css"
 import s1 from "../../assets/s1.webp"
 import s2 from "../../assets/s2.webp"
@@ -8,7 +6,7 @@ import s3 from "../../assets/s3.webp"
 import s4 from "../../assets/s4.webp"
 import s5 from "../../assets/s5.webp"
 import { SliderComponents } from "../components/SliderComponents"
-import { sweeters } from "../../assets/data"
+import { sweeters } from "../data"
 import { Card } from "../components/Card"
 
 

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { sideOptions } from "../../assets/data"
+import { sideOptions } from "../data"
 import "../styles/SiderBar.css"
 import {  NavLink } from "react-router-dom"
 

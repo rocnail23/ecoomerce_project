@@ -1,5 +1,5 @@
 import { useParams } from 'react-router'
-import { sweeters } from '../../assets/data';
+import { sweeters } from '../data';
 import { ImageCard } from '../components/ImageCard'
 import "../styles/ProductPage.css"
 import { ListCard } from '../components/ListCard'

@@ -3,7 +3,7 @@ import "../styles/Cart.css"
 import { ButtonPurchase } from "./ButtonPurchase"
 import { ListCart } from "./ListCart"
 import { useEffect } from 'react';
-import { PaypalButton } from "./PaypalButtons";
+
 
 
 

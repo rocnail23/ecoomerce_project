@@ -1,4 +1,3 @@
-import { useAuth } from "../../Auth/hooks/useAuth";
 import axiosClient from "../../apis/axiosclient";
 import { Product } from "../../interfaces/InterfacesForm";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux-hooks";
@@ -13,7 +12,6 @@ export const useWish = () => {
   const dispatch = useAppDispatch();
 
 
-  const {sendMessageFromServer} = useAuth()
 
   const addOrDeleteWish = async(product: Product) => {
     try {

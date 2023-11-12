@@ -1,10 +1,6 @@
 import axiosClient from "../../apis/axiosclient"
-import { sweeters } from "../../assets/data"
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux-hooks"
-import { setProduct,eliminateProduct,setProducts,updateProduct } from "../../store/slices/product.slice"
-
-
-
+import { setProducts } from "../../store/slices/product.slice"
 const useProduct = () => {
 
     const dispatch = useAppDispatch()

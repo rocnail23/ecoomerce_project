@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import { useState } from 'react';
 export const ChangeEmail = () => {
 
  const [change, setChange] = useState(true)

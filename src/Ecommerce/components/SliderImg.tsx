@@ -1,5 +1,3 @@
-import { useLayoutEffect} from 'react';
-
 interface  Props {
     img:string,
     changeShowImage: () => void

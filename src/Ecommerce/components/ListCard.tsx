@@ -1,6 +1,3 @@
-
-import { useEffect, useRef, useState } from "react"
-import { Product } from "../../interfaces/InterfacesForm"
 import "../styles/ListCard.css"
 
 

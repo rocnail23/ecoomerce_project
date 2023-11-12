@@ -11,7 +11,7 @@ export const ListCart = () => {
   console.log(productInCart)
   return (
     <div className="listCart">
-        {Object.entries(productInCart).map(([index,value]) => (
+        {Object.entries(productInCart).map(([,value]) => (
             <CartProduct key={value.Product.title} product={value}/>
         ))}
     </div>

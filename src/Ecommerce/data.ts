@@ -19,6 +19,7 @@ import raya3 from "../assets/raya3.jpg"
 import lilu from "../assets/lilu.jpg"
 import lilu2 from "../assets/lilu2.jpg"
 import lulu3 from "../assets/lilu3.jpg"
+import { Product } from "../interfaces/InterfacesForm"
 
 export const ImageCarrou = [
     

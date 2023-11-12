@@ -1,4 +1,4 @@
-import { sweeters } from '../../assets/data';
+import { sweeters } from '../data';
 import "../styles/SliderComponent.css"
 import { useLayoutEffect } from 'react';
 import { useSliderC } from "../hooks/useSliderC";

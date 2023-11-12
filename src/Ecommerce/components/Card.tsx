@@ -43,7 +43,7 @@ export const Card = ({product,className,vanish}: Props) => {
 
     const  [animation,setAnimation] = useState(false)
 
-    const handleWish = (e:any) => {
+    const handleWish = () => {
         vanish && setAnimation(!animation)
         setTimeout(() => {
             addOrDeleteWish(product)
@@ -58,7 +58,7 @@ export const Card = ({product,className,vanish}: Props) => {
     console.log("this are cars")
 
     return (
-        <div onClick={() => navigate(`/product/${id}`)} className={`card ${className} ${animation && "card_vanish"}`}>
+        <div onClick={() => navigate(`/product/${id}`)} className={`animate__animated animate__fadeIn card ${className} ${animation && "card_vanish"}`}>
         <Heart onChange={handleWish} value={isWishes}/>
         <img className="card_image" src={img && img[0]} alt="" />
         <div className="card_content">

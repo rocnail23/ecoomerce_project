@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 export const usePagination = () => {
     const [page,setPage] = useState(1)
-    const [itemPage, setItemPage] = useState(6)
+    const itemPage = useRef(6)
 
-    const finalIndex = page * itemPage 
-    const initialIndex = finalIndex - itemPage 
+    const finalIndex = page * itemPage.current 
+    const initialIndex = finalIndex - itemPage.current 
 
     const changePage = (value:number) => {
         setPage(value)

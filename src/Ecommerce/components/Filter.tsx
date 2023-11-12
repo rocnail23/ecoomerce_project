@@ -1,22 +1,20 @@
-
 import "../styles/Filter.css"
-import { useFilter } from '../hooks/useFilter';
 import {memo} from "react"
 
 
 interface Props {
   changeProducts: (value:string) => void
   changePage: (value:number) => void
-  refpage: React.RefObject<HTMLHeadingElement>
+  
 }
 
 
-export const Filter = memo(({changeProducts,changePage,refpage}:Props) => {
+export const Filter = memo(({changeProducts,changePage}:Props) => {
 
       console.log("hola")
   return (
     <>
-    <h3 ref={refpage} className="teko filter_title">Searh result</h3>
+    <h3  className="teko filter_title">Searh result</h3>
     <form
     
     className="filter">

@@ -1,4 +1,4 @@
-import { ImageCarrou as data } from "../../assets/data"
+import { ImageCarrou as data } from "../data"
 import  { useEffect, useRef, useState, } from 'react'
 import { SliderImg } from './SliderImg';
 import "../styles/Slider.css"

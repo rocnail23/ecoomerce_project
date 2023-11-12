@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-import axiosClient from "../../apis/axiosclient"
 import { ChangeEmail, ChangeName, ChangePassword } from "../components/ChangeInfo"
 
 
