@@ -17,18 +17,19 @@ export const RegisterPage = () => {
   const {sendMessageFromServer} = useAuth()
 
   const handleSubmit = async(values: Register) => {
-    const url = window.location.protocol + window.location.host + "/welcome/verifyUser/"
+    const urlBase = window.location.protocol + window.location.host + "/welcome/verifyUser"
     const body = {
-      url,
+      urlBase,
       ...values
     }
     
     try {
       await axiosClient.post('/user',body)
-    sendMessageFromServer({message:"codigo de verificacion envia al correo",category:"primary_alert"})
+    sendMessageFromServer({message:"codigo de verificacion enviado al correo",category:"primary_alert"})
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error :any) {
       if(error.message == "Network Error" ) return sendMessageFromServer({message:"error network", category:"secondary_alert"})
+
       sendMessageFromServer({message:"ups has been an error", category:"secondary_alert"})
     }
    
@@ -55,13 +56,10 @@ export const RegisterPage = () => {
               <MyImput name="password2" type="password" label="repeat-password"/>
 
               <button type="submit" className="btn-input btn-black">Register</button>
-              <GoogleButton
+             <a  href="http://localhost:4000/api/v1/login/google"> <GoogleButton
                 style={{ width: "100%", marginTop: "15px" }}
                 type="light" // can be light or dark
-                onClick={() => {
-                  console.log("Google button clicked");
-                }}
-              />
+              /></a>
             </Form>
           )}
         </Formik>

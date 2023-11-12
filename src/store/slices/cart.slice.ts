@@ -31,7 +31,7 @@ export const cartSlice = createSlice({
     if(state.productInCart[payload.id]){
       state.productInCart[payload.id].quantity++
     }else{
-      state.productInCart[payload.id] = {product:payload,quantity:1}
+      state.productInCart[payload.id] = {Product:payload,quantity:1}
     }
    },
    minusCart:(state,{payload}:PayloadAction<Product>) => {
@@ -43,11 +43,14 @@ export const cartSlice = createSlice({
    },
    getPrice: (state,{payload}: PayloadAction<number>) => {
       state.priceCart = payload
+   },
+   setCart: (state,{payload}:PayloadAction<{[key:number]:ProductCart}>) => {
+        state.productInCart = payload
    }
   },
 })
 
-export const {SetIsOpen,addCart,minusCart,getPrice} = cartSlice.actions
+export const {SetIsOpen,addCart,minusCart,getPrice,setCart} = cartSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 

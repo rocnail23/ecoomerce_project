@@ -3,10 +3,12 @@ import "../styles/AuthPage.css"
 import { VeryfyUserPage } from "../Pages/VeryfyUserPage"
 import { LoginPage } from "../Pages/LoginPage"
 import { RegisterPage } from "../Pages/RegisterPage"
+import { useAppSelector } from "../../store/hooks/redux-hooks"
 
 const AuthRoute = () => {
+  
   return (
-    
+        
         <div className="form_container">
             <div className="form_container_img">
             </div>

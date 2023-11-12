@@ -1,7 +1,7 @@
 .listCard{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 300px) );
+    grid-template-columns: repeat( auto-fit, minmax(200px, 280px) );
     grid-auto-rows: 400px;
     gap: 10px;
 }

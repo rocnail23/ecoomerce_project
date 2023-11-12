@@ -21,20 +21,20 @@ export const wishSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    switchWish: (state, {payload}: PayloadAction<Product>) => {
-      console.log("esto es el redux")
-     state.wishProducts[payload.id] 
-     ?(
-      delete state.wishProducts[payload.id] 
-     )
-     :(
+    addWish: (state, {payload}: PayloadAction<Product>) => {
       state.wishProducts[payload.id] = payload
-     )
+    },
+    deleteWish: (state,{payload}:PayloadAction<Product>) => {
+      delete state.wishProducts[payload.id]
+    },
+    setWishList: (state, {payload}: PayloadAction<{[key:number]: Product}>) => {
+          state.wishProducts = payload
     }
   },
+
 })
 
-export const {switchWish} = wishSlice.actions
+export const {addWish,deleteWish, setWishList} = wishSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 

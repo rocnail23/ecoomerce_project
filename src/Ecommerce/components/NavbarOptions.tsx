@@ -16,7 +16,7 @@ const NavbarOptions = () => {
         <Link to="user/info" className="btn-hover link">
         <i className='bx bx-user bx-sm'></i>
         </Link>
-        <button onClick={switchCard}  className="btn-hover link">
+        <button onClick={switchCard}  className="btn-hover link"  style={{position:"fixed", right:"50px", top: "18px", backgroundColor:"white", borderRadius:"5px"}}>
         <i className='bx bxs-shopping-bag bx-sm'></i>
         </button>
     </div>

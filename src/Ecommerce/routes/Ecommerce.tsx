@@ -5,23 +5,31 @@ import SearchPage from "../pages/SearchPage"
 import { Cart } from "../components/Cart"
 import { ProductPage } from "../pages/ProductPage"
 import UserRouter from "./UserRouter"
+import { useWish } from "../hooks/useWish"
 import useProduct from "../hooks/useProduct"
-import {useEffect} from "react"
+import useCart from "../hooks/useCart"
+import { useEffect } from 'react';
+
 
 
 const info = ["Facebook", "Twiter","Instegram", "LinkdIn"]
 
 export const Ecommerce = () => {
 
+  const {getWishProducts} = useWish()
   const {getProducts} = useProduct()
+  const {getCart} = useCart()
 
   useEffect(() => {
-    
-   getProducts()
-
-  }, [])
+    const token = localStorage.getItem("token")
+    console.log("no pase")
+    if(!token) return
+    console.log("Pase")
+    getWishProducts()
+    getProducts()
+    getCart()
+  },[])
   
-
   return (
     <>
     <Navbar/>

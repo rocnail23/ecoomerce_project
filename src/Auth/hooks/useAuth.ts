@@ -1,15 +1,13 @@
+
 import axiosClient from "../../apis/axiosclient"
 import { Login, Message, User } from "../../interfaces/InterfacesForm"
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux-hooks"
 import { setMessage,checking, onLogout, login } from "../../store/slices/auth.slice"
 
-
-
-
-
-
 export const useAuth = () => {
  const {message,state,user} = useAppSelector(data => data.auth)
+ 
+
  const dispatch = useAppDispatch()
 
  const sendMessageFromServer = (message:Message) => {
@@ -28,6 +26,7 @@ export const useAuth = () => {
      try {
       startChecking()
       const {data} = await axiosClient.post<{token:string,user:User}>("/user/auth",value)
+      
       const {user:{email,name,valid,role}} = data
       const body = {
          email,
@@ -46,6 +45,30 @@ export const useAuth = () => {
 
  }
 
+
+ const validateToken = async() => {
+   try {
+      const token = localStorage.getItem("token")
+      if(!token) return
+     const {data} = await axiosClient("/user/validate")
+     
+       const {user:{email,name,valid,role}} = data
+       const body = {
+          email,
+          name,
+          valid,
+          role
+       }
+       dispatch(login(body))   
+   } catch (error) {
+      onLogout({})
+   }   
+}
+
+
+
+
+
  return {
     message,
     state,
@@ -53,6 +76,7 @@ export const useAuth = () => {
     sendMessageFromServer,
     startChecking,
     startOnlogout,
-    startLogin
+    startLogin,
+    validateToken
  }
 }

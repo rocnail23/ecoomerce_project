@@ -20,10 +20,6 @@ const HomePage = () => {
     
         <div className="grid-primary">
         <Slider/>
-        <div className="container_img">
-        <img className="img-1" src={hombre} />
-        <img className="img-2" src={hombre2} />
-        </div>
         </div> 
         <section >
           <h2 className="home_subtitle m-l">New Styles</h2>

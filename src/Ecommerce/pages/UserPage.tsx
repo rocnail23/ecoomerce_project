@@ -1,10 +1,10 @@
+import { useEffect } from "react"
+import axiosClient from "../../apis/axiosclient"
 import { ChangeEmail, ChangeName, ChangePassword } from "../components/ChangeInfo"
 
 
 
 export const UserPage = () => {
-
- 
 
   return (
     <div className="animate__animated animate__fadeIn">

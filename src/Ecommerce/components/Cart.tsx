@@ -25,7 +25,7 @@ export const Cart = () => {
     <h3 className="teko">priceCart: {priceCart}<span className="cart_price_mount teko">$</span></h3>
    </div>
    <ButtonPurchase width="80%"/>
-   <PaypalButton/>
+   
     </div>
     
   )

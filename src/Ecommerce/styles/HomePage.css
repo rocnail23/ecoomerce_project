@@ -9,11 +9,9 @@
 
 
 .grid-primary  {
-  width: 100%;
-  height: 500px;
+  width: 80vw;
   margin-bottom: 6rem;
   display: grid;
-  grid-template-columns:  2fr 1fr;
   gap: 1rem;
 }
 

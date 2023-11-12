@@ -25,7 +25,7 @@ export interface Product {
 
 
 export interface ProductCart{
-    product: Product,
+    Product: Product,
     quantity: number
 }
 
