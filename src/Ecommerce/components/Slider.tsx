@@ -9,8 +9,8 @@ export const Slider = () => {
   const [changing, setChangin] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(false)
-  const interval = useRef<NodeJS.Timeout>()
-  const timeOut = useRef<NodeJS.Timeout>()
+  const interval = useRef<ReturnType<typeof setInterval>>()
+  const timeOut = useRef<ReturnType<typeof setInterval>>()
   
   useEffect(() => {
    
