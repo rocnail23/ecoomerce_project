@@ -1,5 +1,5 @@
 .container{   
-    margin: 6rem 2rem 0rem 2rem;
+    margin: 6rem 2rem calc(500px + 4rem) 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

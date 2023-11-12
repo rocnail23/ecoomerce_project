@@ -2,7 +2,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat( auto-fit, minmax(200px, 280px) );
-    grid-auto-rows: minmax(250px,32vh);
-    
+    grid-auto-rows: minmax(250px,300px);
+    min-height: min-content;
     gap: 10px;
 }

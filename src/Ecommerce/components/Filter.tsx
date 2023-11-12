@@ -5,16 +5,15 @@ import {memo} from "react"
 interface Props {
   changeProducts: (value:string) => void
   changePage: (value:number) => void
-  
 }
 
 
 export const Filter = memo(({changeProducts,changePage}:Props) => {
 
-      console.log("hola")
+     
   return (
     <>
-    <h3  className="teko filter_title">Searh result</h3>
+    <h3   className="teko filter_title">Searh result</h3>
     <form
     
     className="filter">
