@@ -4,11 +4,11 @@
     background-color: rgb(244,244,245,0.9);
     position: fixed;
     top: 0px;
+    bottom: 0px;
     right: -370px;
     z-index: 5000;
     display: flex;
     align-items: center;
-    padding: 2rem 0.5rem;
     flex-direction: column;
     transition: right 0.3s ease;
     overflow-y: scroll;
