@@ -6,13 +6,15 @@ import { Product } from '../../interfaces/InterfacesForm'
 // Define a type for the slice state
 interface ProductState {
   products: Product[],
-  product?: Product
+  product?: Product,
+  loading: boolean
 }
 
 // Define the initial state using that type
 const initialState: ProductState = {
   products: [],
-  product: undefined  
+  product: undefined,
+  loading:true
 }
 
 export const productSlice = createSlice({
@@ -31,11 +33,14 @@ export const productSlice = createSlice({
    },
    updateProduct: (state, {payload}:PayloadAction<Product>) => {
       state.products = state.products.map(product => product.id == payload.id ? payload : product)
-   }    
+   },
+   setLoading: (state,{payload}:PayloadAction<boolean>) => {
+    state.loading = payload
+ }
   },
 })
 
-export const {setProducts,setProduct,eliminateProduct,updateProduct} = productSlice.actions
+export const {setProducts,setProduct,eliminateProduct,updateProduct,setLoading} = productSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 

@@ -9,7 +9,6 @@ nav {
     width: 100%;
     margin: auto;
     transition: all 0.3s ease;
-    background-color: white;
     z-index: 1000;
 }
 

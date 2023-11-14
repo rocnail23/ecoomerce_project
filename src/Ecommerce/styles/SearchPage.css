@@ -1,3 +1,7 @@
 .search{
     width: 70vw;
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

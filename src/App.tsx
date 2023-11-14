@@ -4,13 +4,19 @@ import RouterApp from './router/RouterApp'
 import { useAuth } from './Auth/hooks/useAuth'
 
 
+
 function App() {
 
-    const {validateToken} = useAuth()
+    
 
+    const {validateToken} = useAuth()
+    
     useEffect(() => {
        validateToken()  
     },[])
+
+    
+
     
     return <RouterApp/>
   

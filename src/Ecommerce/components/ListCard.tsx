@@ -5,10 +5,10 @@ import "../styles/ListCard.css"
 
 interface Props {
   children: JSX.Element[] | JSX.Element
-  
+  className?: string
 }
 
-export const ListCard = ({children}:Props) => {
+export const ListCard = ({children,className}:Props) => {
 
 
  
@@ -16,7 +16,7 @@ export const ListCard = ({children}:Props) => {
   
   return (
     
-    <div className={`listCard animate__animated "animate__fadeIn"}`}>
+    <div className={`listCard animate__animated animate__fadeIn ${className}`}>
        {children}
     </div>
   )

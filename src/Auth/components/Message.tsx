@@ -8,20 +8,22 @@ export const Message = () => {
 
     
   const {message,sendMessageFromServer} = useAuth()
-
   const [ref,setRef] = useState(true) 
+  const [isShow, setIsShow] = useState(false)
  
   useEffect(() => {
+    if(isShow) return
     if(!message?.message) return
-
+    setIsShow(true)
     setTimeout(() => {
       setRef(false)
-    },8000)
+    },5000)
 
     setTimeout(() => {
       sendMessageFromServer({})
       setRef(true)
-      },10000)
+      setIsShow(false)
+      },5300)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[message])
 

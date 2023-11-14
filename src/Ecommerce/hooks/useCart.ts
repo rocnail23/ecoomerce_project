@@ -30,7 +30,7 @@ const useCart = () => {
    
     const getCart = async() => {
         try {
-            const {data} = await axiosClient<ProductCart[]>("/cart")
+            const {data} = await axiosClient<ProductCart[]>("/cart",{withCredentials:true})
             const cart:{[key:number]:ProductCart} = {}
             for(let product of data){
                 cart[product.Product.id] = product
@@ -46,12 +46,12 @@ const useCart = () => {
     const plusCart = async(product:Product,value:number) => {
         await axiosClient.put(`/cart/${product.id}`,{
             value
-        })
+        },{withCredentials:true})
         dispatch(addCart(product))
     }
 
     const addtoCart = async(product:Product) => {
-         await axiosClient.post(`/cart/${product.id}`)
+         await axiosClient.post(`/cart/${product.id}`,{},{withCredentials:true})
          dispatch(addCart(product))
     }
 
@@ -59,11 +59,11 @@ const useCart = () => {
        try {
         if(value == 0){
             console.log(value)
-            await axiosClient.delete(`/cart/${product.id}`)
+            await axiosClient.delete(`/cart/${product.id}`,{withCredentials:true})
         }else{
             await axiosClient.put(`/cart/${product.id}`,{
                 value
-            })
+            },{withCredentials:true})
         }
         dispatch(minusProduct(product))
        } catch (error) {

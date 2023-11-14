@@ -12,11 +12,12 @@ interface Props {
     product: Product
     className?: string,
     vanish?: boolean
+    admin?: boolean
 }
 
 
 
-export const Card = ({product,className,vanish}: Props) => {
+export const Card = ({product,className,vanish,admin=false}: Props) => {
  
     const {description,img,price,title,id} = product
     const {addtoCart,plusCart,productInCart} = useCart()
@@ -58,18 +59,24 @@ export const Card = ({product,className,vanish}: Props) => {
     console.log("this are cars")
 
     return (
-        <div onClick={() => navigate(`/product/${id}`)} className={`animate__animated animate__fadeIn card ${className} ${animation && "card_vanish"}`}>
-        <Heart onChange={handleWish} value={isWishes}/>
+        <div onClick={() => navigate(`/product/${id}`)} className={` card ${!vanish && "animate__animated animate__fadeIn"} ${className} ${animation && "card_vanish"}`}>
+         {!admin && <Heart onChange={handleWish} value={isWishes}/>}
         <img className="card_image" src={img && img[0]} alt="" />
         <div className="card_content">
         <div className="card_t-p">
         <h2  className="card_title">{title}</h2>
         <span className="card_price">{price}$</span>
         </div>
-        <p className="card_description">
-        {shortDescription}
-        </p>
-        <ButtonAdd onClick={handleClick} className="card_btnAdd"/>
+        {
+            !admin && <p className="card_description">
+            {shortDescription}
+            </p>
+        }
+        {admin?(
+            <button onClick={(e) => e.stopPropagation()} className="card_btnAdd btn_add teko">edit Product</button>
+        ):(
+            <ButtonAdd onClick={handleClick} className="card_btnAdd"/>
+        )}
         </div>
         </div>
     )

@@ -7,14 +7,16 @@ import { Product, ProductCart } from '../../interfaces/InterfacesForm';
 interface CartState {
   isOpen: boolean,
   productInCart: {[key:number] : ProductCart},
-  priceCart: number 
+  priceCart: number,
+  loading: boolean
 }
 
 // Define the initial state using that type
 const initialState: CartState = {
   isOpen: false,
   productInCart: {},
-  priceCart: 20.00
+  priceCart: 20.00,
+  loading:true
 }
 
 
@@ -46,7 +48,8 @@ export const cartSlice = createSlice({
    },
    setCart: (state,{payload}:PayloadAction<{[key:number]:ProductCart}>) => {
         state.productInCart = payload
-   }
+   },
+   
   },
 })
 

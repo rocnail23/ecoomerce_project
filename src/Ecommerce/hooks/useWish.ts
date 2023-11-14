@@ -16,11 +16,12 @@ export const useWish = () => {
   const addOrDeleteWish = async(product: Product) => {
     try {
       if (wishProducts[product.id]) {
-        const res =  await axiosClient.delete(`/product/wishlist/${product.id}`)
+        const res =  await axiosClient.delete(`/product/wishlist/${product.id}`,{withCredentials:true})
         console.log(res)
         dispatch(deleteWish(product));
       } else {
-        const res = await axiosClient.post(`/product/wishlist/${product.id}`)
+        const res = await axiosClient.post(`/product/wishlist/${product.id}`,{},{withCredentials:true})
+      
         console.log(res)
         dispatch(addWish(product));
       }
@@ -31,7 +32,7 @@ export const useWish = () => {
 
   const getWishProducts = async () => {
     try {
-      const { data } = await axiosClient("/wishlist");
+      const { data } = await axiosClient("/wishlist",{withCredentials:true});
       const wishList: { [key: number]: Product } = {};
       for (let product of data) {
         wishList[product.id] = product;

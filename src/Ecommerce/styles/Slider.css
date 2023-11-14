@@ -34,7 +34,7 @@
   height: 100%;
   opacity: 0;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 .showImage {

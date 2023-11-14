@@ -1,16 +1,17 @@
 import axiosClient from "../../apis/axiosclient"
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux-hooks"
-import { setProducts } from "../../store/slices/product.slice"
+import { setProducts,setLoading } from "../../store/slices/product.slice"
+
 const useProduct = () => {
 
     const dispatch = useAppDispatch()
-    const {products,product} = useAppSelector(state => state.product)
+    const {products,product,loading} = useAppSelector(state => state.product)
     
     const getProducts = async() => {
         try {
           const {data}  = await axiosClient("/product")
           dispatch(setProducts(data.product))
-
+          dispatch(setLoading(false))
         } catch (error) {
           console.log(error)
         }
@@ -20,7 +21,8 @@ const useProduct = () => {
   return {
     products,
     product,
-    getProducts
+    getProducts,
+    loading
   }
 
 }

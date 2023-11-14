@@ -15,14 +15,14 @@ export const LoginPage = () => {
   const {startLogin} = useAuth()
   const navigate = useNavigate()
 
-  const hadleSubmit = async(values :Login) => {
-       try {
-          await  startLogin(values)
-           navigate("/")
-       } catch (error) {
-          console.log(error)
-       }
+  const hadleSubmit = (values :Login) => {
+       
+           startLogin(values)
+           .then(() => navigate("/"))
+           .catch((error) => console.log(error))
   }
+          
+      
   
   return (
     <div className="register animate__animated animate__fadeIn" >

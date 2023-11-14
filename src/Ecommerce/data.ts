@@ -138,33 +138,38 @@ export const sweeters: Product[] = [
 ]
 
 export const sideOptions = [
-
    {
-      id:1,
+      id:2,
+      icon:'bx bxs-customize',
+      text: "admin",
+      path: "/user/admin"
+   },
+   {
+      id:2,
       icon: "bx bx-user-circle",
       text: "user",
       path: "/user/info"
    },
    {
-      id:2,
+      id:3,
       icon: "bx bxs-heart-circle",
       text: "wishes",
       path: "/user/wishes"
    },
    {
-      id:3,
+      id:4,
       icon: "bx bxs-cart",
       text: "cart",
       path: "/user/cart"
    },
    {
-      id:4,
+      id:5,
       icon: "bx bxs-shopping-bag",
       text:"purcharses",
       path: "/user/purchases"
    },
    {
-     id:5,
+     id:6,
      icon:  "bx bxs-moon",
      text: "darkMode"
    }

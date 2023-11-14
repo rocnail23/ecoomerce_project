@@ -3,14 +3,20 @@ import AuthPage from "../Auth/routes/AuthRoute"
 import { Ecommerce } from "../Ecommerce/routes/Ecommerce"
 import { Message } from "../Auth/components/Message"
 import { useAppSelector } from "../store/hooks/redux-hooks"
+import { Loader } from "../Auth/components/Loader"
+
 
 const RouterApp= () => {
   const  {state} = useAppSelector(data => data.auth)
- 
+  
 
-
-  return (
+  if(state == "checking"){
+    return (<Loader/>)}
+  
+    return (
     <Router>
+
+
       <Routes>
       {state == "authenticated"
       ? (

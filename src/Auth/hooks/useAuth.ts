@@ -49,19 +49,30 @@ export const useAuth = () => {
  const validateToken = async() => {
    try {
       const token = localStorage.getItem("token")
-      if(!token) return
-     const {data} = await axiosClient("/user/validate")
+      if(!token){
+         console.log("google")
+        const {data} = await axiosClient<User>("/user/google",{
+         withCredentials:true
+       })
+       console.log(data)
+       dispatch(login(data))
+      }else{
+         const {data} = await axiosClient("/user/validate")
      
-       const {user:{email,name,valid,role}} = data
-       const body = {
-          email,
-          name,
-          valid,
-          role
-       }
-       dispatch(login(body))   
+         const {user:{email,name,valid,role}} = data
+         const body = {
+            email,
+            name,
+            valid,
+            role
+         }
+         
+         dispatch(login(body))  
+      }
+    
    } catch (error) {
-      onLogout({})
+      console.log("aqui lleguer")
+      startOnlogout()
    }   
 }
 
