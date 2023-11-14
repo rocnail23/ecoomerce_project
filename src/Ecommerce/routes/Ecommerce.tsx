@@ -8,9 +8,9 @@ import UserRouter from "./UserRouter"
 import { useWish } from "../hooks/useWish"
 import useProduct from "../hooks/useProduct"
 import useCart from "../hooks/useCart"
-import { useEffect,lazy,Suspense } from 'react';
+import { useEffect} from 'react';
 import { useAuth } from "../../Auth/hooks/useAuth"
-import { Loader } from "../../Auth/components/Loader"
+
 
 
 

@@ -7,7 +7,7 @@ import { PurcharsePage } from "../pages/PurcharsePage"
 import "../styles/UserRouter.css"
 import { useAuth } from "../../Auth/hooks/useAuth"
 import { AdminPage } from "../pages/AdminPage"
-import ReactModal from "../components/Modal"
+
 
 
 const UserRouter = () => {
