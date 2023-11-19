@@ -19,11 +19,11 @@ interface Props {
 
 export const Card = ({product,className,vanish,admin=false}: Props) => {
  
-    const {description,img,price,title,id} = product
+    const {description,Images,price,title,id} = product
     const {addtoCart,plusCart,productInCart} = useCart()
     const {wishProducts,addOrDeleteWish} = useWish()
     const navigate = useNavigate()
-
+    console.log(Images)
     const shortDescription = useMemo(() => {
         if(description.length > 80){
             return description.slice(0,80) + "..."
@@ -61,7 +61,7 @@ export const Card = ({product,className,vanish,admin=false}: Props) => {
     return (
         <div onClick={() => navigate(`/product/${id}`)} className={` card ${!vanish && "animate__animated animate__fadeIn"} ${className} ${animation && "card_vanish"}`}>
          {!admin && <Heart onChange={handleWish} value={isWishes}/>}
-        <img className="card_image" src={img && img[0]} alt="" />
+        <img className="card_image animate__animated animate__fadeIn" src={Images?.[0]?.url} alt="" />
         <div className="card_content">
         <div className="card_t-p">
         <h2  className="card_title">{title}</h2>

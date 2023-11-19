@@ -1,0 +1,95 @@
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: end;
+}
+
+.modal_title{
+   position: relative;
+   top: 5px;
+}
+
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  transition: opacity .2s ease-in-out;
+  z-index: 5000;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.Modal {
+    position: absolute;
+    top: 40px;
+    width: 700px;
+    max-width: 80vw;
+    bottom: 40px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255,0.6) ;
+  }
+
+.modal_form{
+    margin-top: 0.5rem;
+}
+
+.modal_form_principal{
+ display: flex;
+ justify-content: baseline;
+ gap: 1rem;
+}
+
+.modal_form_area{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    
+}
+
+.modal_form_area > label {
+    font-size: 1.6rem;
+    position: relative;
+    top: 5px;
+}
+
+.modal_form_area > input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+    outline: none;
+    height: 1.5rem;
+    padding: 5px;
+    font-size: 1.1rem;
+}
+
+.modal_form_area > textarea {
+    width: 100%;
+    min-height: 100px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    font-size: 1rem;
+}

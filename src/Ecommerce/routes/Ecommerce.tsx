@@ -10,6 +10,7 @@ import useProduct from "../hooks/useProduct"
 import useCart from "../hooks/useCart"
 import { useEffect} from 'react';
 import { useAuth } from "../../Auth/hooks/useAuth"
+import ReactModal from '../components/Modal';
 
 
 
@@ -32,7 +33,7 @@ export const Ecommerce = () => {
     getCart()
   },[state])
     
- 
+ const modalIsOpen = true
   
     return (
       <>

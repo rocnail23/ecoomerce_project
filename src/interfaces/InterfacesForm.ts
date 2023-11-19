@@ -19,7 +19,7 @@ export interface Product {
  price: number,
  title: string,
  description: string,
- img:string[]
+ Images: {id:number,url:string}[]
 
 }
 

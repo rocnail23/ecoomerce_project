@@ -10,6 +10,7 @@ const useProduct = () => {
     const getProducts = async() => {
         try {
           const {data}  = await axiosClient("/product")
+          console.log(data)
           dispatch(setProducts(data.product))
           dispatch(setLoading(false))
         } catch (error) {

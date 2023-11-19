@@ -1,8 +1,8 @@
 import Modal from 'react-modal';
+import "../styles/Modal.css"
 
 
-
-Modal.setAppElement(document.getElementById("#root")!);
+Modal.setAppElement("#root");
 
 interface Props {
   openModal: () => void,
@@ -10,48 +10,44 @@ interface Props {
   modalIsOpen: boolean
 }
 
-export default function ReactModal({openModal,closeModal,modalIsOpen}:Props) {
-    let subtitle: {style:{color:string}} | null
+export default function ReactModal({closeModal,modalIsOpen}:Props) {
+   
  
   
    
-    function afterOpenModal() {
-      // references are now sync'd and can be accessed.
-      subtitle!.style.color = '#f00';
-    }
   
     
-    const customStyles = {
-        content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-        },
-      };
-      
+     
 
     return (
-      <div>
-        <button style={{zIndex:"20000"}} onClick={openModal}>Open Modal</button>
+      <div >
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
-          style={customStyles}
-          contentLabel="Example Modal"
+          className="Modal"
+          overlayClassName="Overlay"
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-          <button onClick={closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+        
+           <div className='modal_header'>
+           <h2  className='modal_title teko'>Product</h2>
+           <button className='modal_btn_close' onClick={closeModal}><i className='bx bx-x-circle bx-md'></i></button>
+           </div>
+          <form className="modal_form">
+          <div className='modal_form_principal'>
+          <div className='modal_form_area'>
+            <label className='teko'>title</label>
+            <input type="text" />
+           </div>
+           <div className='modal_form_area'>
+            <label className='teko'>price</label>
+            <input type="number" />
+           </div>
+          </div>
+           <div className='modal_form_area'>
+            <label className='teko'>description</label>
+            <textarea/>
+           </div>
+           <hr />
           </form>
         </Modal>
       </div>
