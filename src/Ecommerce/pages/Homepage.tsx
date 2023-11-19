@@ -6,13 +6,13 @@ import s3 from "../../assets/s3.webp"
 import s4 from "../../assets/s4.webp"
 import s5 from "../../assets/s5.webp"
 import { SliderComponents } from "../components/SliderComponents"
-import { sweeters } from "../data"
 import { Card } from "../components/Card"
+import useProduct from "../hooks/useProduct"
 
 
 
 const HomePage = () => {
-  
+    const {products} = useProduct()
   return (
     <>
     
@@ -36,7 +36,7 @@ const HomePage = () => {
         </div>
         </section>
         <SliderComponents gap="20px" className="m-b4"> 
-            {sweeters.map(value=> (
+            {products.slice(0,6).map(value=> (
               <Card 
               key={value.id}
               product={value}
@@ -58,7 +58,7 @@ const HomePage = () => {
         </div>
         </section>
         <SliderComponents gap="20px"> 
-            {sweeters.map(value=> (
+            {products.slice(0,6).map(value=> (
               <Card 
               key={value.id}
               product={value}
