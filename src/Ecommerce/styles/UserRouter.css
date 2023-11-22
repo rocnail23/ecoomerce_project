@@ -6,3 +6,24 @@
     padding: 1rem;
     position: relative;
 }
+
+@media (max-width:768px){
+    .userRouter{
+        width: calc(100% - 60px);
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width:460px){
+    .userRouter{
+        width: calc(100% - 30px);
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width:350px){
+    .userRouter{
+        width: 100%;
+        margin-left: 3rem;
+    }
+}

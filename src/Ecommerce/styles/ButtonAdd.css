@@ -1,7 +1,10 @@
 .btn_add{
     background-color: green;
     color: white;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;
     transition: all .3s ease;
 }
 

@@ -26,14 +26,7 @@ export const Navbar = () => {
       <div className="title">
       <Link className="link" to="/"><h1 className="title_h1">Style<span>Crash</span></h1></Link>
       </div>
-    <div className="sex">
-     <button className="btn-hover">
-     <p>Man</p>
-     </button>
-     <button className="btn-hover">
-     <p>Woman</p>
-     </button>
-    </div>
+   
     <NavbarOptions/>
     </nav>
   )

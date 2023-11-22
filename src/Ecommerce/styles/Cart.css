@@ -43,8 +43,17 @@
     background-color: green;
     color: white;
     height: 50px;
+    min-width: 125px;
     padding: 0.25rem 0.25rem;
     border-radius: 10px;
     font-size: 1.50rem;
     font-weight: bold;
+}
+
+@media (max-width:460px){
+
+    .cart{
+        width: 250px;
+    }
+
 }

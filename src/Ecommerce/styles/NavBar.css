@@ -6,7 +6,7 @@ nav {
     padding: 1rem 5rem 0rem 5rem;
     top: 0px;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     margin: auto;
     transition: all 0.3s ease;
     z-index: 1000;
@@ -35,5 +35,37 @@ nav.noShow{
     font-family: inherit;
     font-weight: bold;
     font-size: 2.2rem;
+
+}
+
+
+@media (max-width:768px) {
+    nav {
+        padding: 1rem 2rem 0rem 2rem; 
+    }
+}
+
+@media (max-width:640px) {
+    nav {
+        padding: 1rem 1rem 0rem 1rem; 
+    }
+}
+
+
+@media (max-width:460px){
+
+nav{
+    padding: 1rem .2rem;
+}
+
+.title_h1 {
+    font-family: 'Titillium Web', sans-serif; ;
+    font-size: 1.5rem;
+}
+.title_h1 > span {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
 
 }

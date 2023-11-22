@@ -19,8 +19,8 @@ export const VeryfyUserPage = () => {
   useEffect(() => {
            const validateCode = async() => {
             try {
-            const res =  await axiosClient.get(`/user/verifyCode/${code}`)
-            console.log(res)
+             await axiosClient.get(`/user/verifyCode/${code}`)
+      
               startOnlogout()
             } catch (error) {
               setIsError(true)

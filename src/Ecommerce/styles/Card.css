@@ -24,6 +24,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    z-index: 2000;
 }
 
 .card_content{
@@ -64,18 +65,52 @@
    align-self: center;
 }
 
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
 .card_description{
-    font-size: .9rem;
+    font-size: 0.8em;
 }
 
 .card_btnAdd{
-    align-self: flex-end;
-    width: 30%;
     margin-top: 0.5rem;
-    font-size: 1.2rem;
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
+    font-size: 1rem;
+    padding: 0 0.5rem;
 }
 
+.card_btnEdit{
+    background-color: green;
+    border-radius: 15px;
+    color:white;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
 
+.card_btnEdit:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer
+}
+
+.card_btn_admin{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.card_btn_admin > button > i {
+    position: relative;
+    top: 4px;
+}
+
+@media (max-width:360px){
+    .card_circle-heart{
+       
+        right: 0px;
+        top: 0px;
+    
+    }
+}

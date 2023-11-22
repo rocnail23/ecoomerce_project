@@ -18,7 +18,7 @@ export const CartProduct = ({product}:Props) => {
   return (
     <div className="cartProduct bg-g shadow">
        <div className="cartProduct_img">
-       <img src={item.Images?.[0].url} alt="" />
+       <img src={item.Images?.[0]?.url} alt="" />
        </div>
     
       

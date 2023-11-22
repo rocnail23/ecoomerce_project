@@ -1,3 +1,18 @@
+.Modal {
+  min-width: 600px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -60px;
+  right: calc(50% - 300px);
+  top: calc(50% - 350px);
+  z-index: 10000;
+}
+
+
 .modal_header{
     display: flex;
     justify-content: space-between;
@@ -9,50 +24,25 @@
    position: relative;
    top: 5px;
 }
-
-.ReactModalPortal > div{
-    opacity: 0;
+.modal_btn_close{
+  transition: all 0.1s ease;
 }
 
-.ReactModalPortal .ReactModal__Overlay {
-  transition: opacity .2s ease-in-out;
-  z-index: 5000;
+.modal_btn_close:hover{
+  cursor: pointer;
+  scale: 1.05;
 }
 
-.ReactModalPortal .ReactModal__Overlay--after-open {
-  opacity: 1;
-}
 
-.ReactModalPortal .ReactModal__Overlay--before-close {
-  opacity: 0;
-}
-
-.Modal {
-    position: absolute;
-    top: 40px;
-    width: 700px;
-    max-width: 80vw;
-    bottom: 40px;
-    background-color: white;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    
-  }
-
-  .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255,0.6) ;
-  }
 
 .modal_form{
-    margin-top: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    padding-bottom: 3rem;
+    position: relative;
+  
 }
 
 .modal_form_principal{
@@ -64,7 +54,6 @@
 .modal_form_area{
     display: flex;
     flex-direction: column;
-    height: 70%;
     
 }
 
@@ -83,6 +72,7 @@
     height: 1.5rem;
     padding: 5px;
     font-size: 1.1rem;
+    
 }
 
 .modal_form_area > textarea {
@@ -92,4 +82,55 @@
     outline: none;
     padding: 5px;
     font-size: 1rem;
+    resize: none;
+}
+
+.modal_img{
+  display: flex;
+  flex-direction: column;
+}
+
+.list_image{
+  grid-template-columns: repeat( auto-fit, minmax(200px, 150px) );
+  grid-auto-rows: minmax(125px,100px);
+}
+
+.modal_img > label {
+  font-size: 1.6rem;
+}
+
+.modal_footer{
+  height: 10%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 5px;
+  right: 1rem;
+}
+
+.modal_submit{
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 0 1.5rem;
+  align-self: flex-end;
+}
+
+@media (max-width:640px){
+  .Modal {
+    min-width: 400px;
+    right: calc(50% - 200px);
+    top: -50px;
+  }
+
+}
+
+@media (max-width:460px){
+  .Modal {
+    min-width: 280px;
+    right: calc(50% - 130px);
+    top: -50px;
+  }
+
 }

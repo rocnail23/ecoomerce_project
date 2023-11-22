@@ -22,9 +22,9 @@ const HomePage = () => {
         <section >
           <h2 className="home_subtitle m-l">New Styles</h2>
         <div className="bg-s1">
-          <img src={s1} alt="" />
-          <img src={s2} alt="" />
-          <img src={s3} alt="" />
+          <div> <img src={s1} alt="" />  </div>
+          <div><img src={s2} alt="" />  </div>
+          <div> <img src={s3} alt="" /> </div>
         </div>
         <div className="action">
           <h3 className="titi">New styles already for you.</h3>
@@ -40,14 +40,16 @@ const HomePage = () => {
               <Card 
               key={value.id}
               product={value}
-              className="shadow"/>
+              className="shadow"
+              classFont="home_card_description"/>
             ))}
         </SliderComponents>
         <section >
           <h2 className="sub_title m-l">New Styles</h2>
         <div className="bg-s1">
-          <img src={s4} alt="" />
-          <img src={s5} alt="" />
+          <div><img src={s4} alt="" /></div>
+          <div><img src={s5} alt="" /></div>
+          
         </div>
         <div className="action">
           <h3 className="titi">Simple. Classic.</h3>
@@ -62,7 +64,8 @@ const HomePage = () => {
               <Card 
               key={value.id}
               product={value}
-              className="shadow"/>
+              className="shadow"
+              classFont="home_card_description"/>
             ))}
         </SliderComponents>
         

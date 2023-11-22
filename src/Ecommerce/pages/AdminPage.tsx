@@ -13,6 +13,7 @@ export const AdminPage = () => {
 
 
   return (
+    <>
     <div className='wishesPage'>
     <h3 className="title_3 teko">Admin Products</h3>
     <hr className="m-b2" />
@@ -25,13 +26,19 @@ export const AdminPage = () => {
     />
     <ListCard>
     {filterProducts.map(product => (
-       <Card admin product={product}/>
+       <Card 
+       key={product.id}
+       admin 
+       product={product}
+       openModal={openModal}/>
     )) }
     </ListCard>
-    <ReactModal 
-    closeModal={closeModal}
-    modalIsOpen={modalIsOpen}
-    openModal={openModal}/>
     </div>
+
+<ReactModal 
+closeModal={closeModal}
+modalIsOpen={modalIsOpen}
+openModal={openModal}/>
+</>
   )
 }

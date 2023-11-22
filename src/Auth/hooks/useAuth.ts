@@ -50,11 +50,10 @@ export const useAuth = () => {
    try {
       const token = localStorage.getItem("token")
       if(!token){
-         console.log("google")
+         
         const {data} = await axiosClient<User>("/user/google",{
          withCredentials:true
        })
-       console.log(data)
        dispatch(login(data))
       }else{
          const {data} = await axiosClient("/user/validate")
@@ -71,7 +70,6 @@ export const useAuth = () => {
       }
     
    } catch (error) {
-      console.log("aqui lleguer")
       startOnlogout()
    }   
 }

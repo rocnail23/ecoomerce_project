@@ -26,7 +26,7 @@ export const SliderComponents = ({children,gap,className}:Props) => {
     <div className={`sliderComponent ${className}`}>
       <h2 className="home_subtitle">sweaters</h2>
        <div className='btn-leftArrow btn-gray' onClick={handlePrev}>&#10092;</div>
-      <div onClick={() => handleNext(products.slice(0,6))} className='btn-rightArrow btn-gray'>&#10093;</div>
+       <div onClick={() => handleNext(products.slice(0,6))} className='btn-rightArrow btn-gray'>&#10093;</div>
         <div ref={container} className='sliderComponent_container'>
             {children.map(value => (
               <div key={value.key}  ref={item}>
@@ -36,6 +36,7 @@ export const SliderComponents = ({children,gap,className}:Props) => {
               </div>
             ))} 
         </div>
+        <p></p>
     </div>
   )
 }

@@ -48,18 +48,17 @@ export const LoginPage = () => {
                 type='password' 
                 label='password'/>
                 
-                <button type='submit' className="btn-input btn-black">Register</button>
-                <GoogleButton
-                    style={{width:"100%", marginTop:"15px"}}
-                    type="light" // can be light or dark
-                    onClick={() => { console.log('Google button clicked') }}
-                        />
+                <button type='submit' className="btn-input btn-black">Login</button>
+                <a  href="http://localhost:4000/api/v1/login/google"> <GoogleButton
+                style={{ width: "100%", marginTop: "15px" }}
+                type="light" // can be light or dark
+              /></a>
                     </Form>
                 )}
               
               </Formik>
             <div className="sign_option">
-                <p>dont hava a account? <span><Link to="/welcome/register">Register!</Link></span></p>
+                <p>dont have a account? <span><Link to="/welcome/register">Register!</Link></span></p>
             </div>        
         </div>
     

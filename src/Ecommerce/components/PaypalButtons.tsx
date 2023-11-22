@@ -28,7 +28,7 @@ export const PaypalButton = () => {
             "Content-Type" : "application/json"
         }
        })
-        console.log(respond.data.id)
+       
        return respond.data.id
    }
 

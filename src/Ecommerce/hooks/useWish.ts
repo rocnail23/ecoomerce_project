@@ -16,13 +16,13 @@ export const useWish = () => {
   const addOrDeleteWish = async(product: Product) => {
     try {
       if (wishProducts[product.id]) {
-        const res =  await axiosClient.delete(`/product/wishlist/${product.id}`,{withCredentials:true})
-        console.log(res)
+        await axiosClient.delete(`/product/wishlist/${product.id}`,{withCredentials:true})
+  
         dispatch(deleteWish(product));
       } else {
-        const res = await axiosClient.post(`/product/wishlist/${product.id}`,{},{withCredentials:true})
+         await axiosClient.post(`/product/wishlist/${product.id}`,{},{withCredentials:true})
       
-        console.log(res)
+        
         dispatch(addWish(product));
       }
     } catch (error) {

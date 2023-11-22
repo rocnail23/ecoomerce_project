@@ -5,3 +5,23 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.search > div {
+    width: 100%;
+}
+
+.search_card_font{
+    font-size: .8rem;
+}
+
+@media (max-width:768px) {
+    .search{
+        width: 100%;
+    }
+}
+
+@media (max-width:360px){
+   .search_card_font{
+    font-size: .6rem;
+   }
+}

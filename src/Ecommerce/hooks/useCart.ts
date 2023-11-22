@@ -58,7 +58,7 @@ const useCart = () => {
     const minusCart = async(product:Product,value:number) => {
        try {
         if(value == 0){
-            console.log(value)
+           
             await axiosClient.delete(`/cart/${product.id}`,{withCredentials:true})
         }else{
             await axiosClient.put(`/cart/${product.id}`,{

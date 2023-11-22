@@ -47,7 +47,9 @@ export const ProductPage = () => {
       <h2 className='teko'>{product?.title}</h2>
       <h3 className='teko'>{product?.description}</h3>
       <hr/>
-      <ButtonAdd onClick={add} className='productPage_btn_add'/>
+      <div onClick={add} className='productPage_add_container'>
+      <ButtonAdd className='productPage_btn_add'/> <p className='teko'>add To Cart</p>
+      </div>
     </div>
     </div>
 
@@ -56,7 +58,8 @@ export const ProductPage = () => {
     <h3 className='teko'>similar products</h3>
    <ListCard>
     {products.slice(0,4).map(product => (
-      <Card product={product}/>
+      <Card product={product}
+      classFont='search_card_font'/>
 ))}
     </ListCard>
    </div>

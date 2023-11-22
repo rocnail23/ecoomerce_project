@@ -21,7 +21,7 @@ export const SideBar = () => {
           if( option.text == "admin" && user.role != "admin"){
             return  null
           }else if(option.path){
-            return <NavLink  to={option.path!} className={({ isActive, isPending }) =>
+            return <NavLink key={option.text}  to={option.path!} className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : "link"
           }> 
           

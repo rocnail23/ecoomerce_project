@@ -11,9 +11,8 @@
 
 .grid-primary  {
   width: 80vw;
+  height: 80vh;
   margin-bottom: 6rem;
-  display: grid;
-  gap: 1rem;
 }
 
 .container_img{
@@ -33,23 +32,21 @@
 
 
 .bg-s1{
-  width: calc(100vw - 20px);
-  height: 500px;
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
- 
+  width: calc(100vw);
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(1px, 1fr) )
+  
 }
 
-.bg-s1 > img{
+.bg-s1 > div > img{
   height: 100%;
+  width: 100%;
   transition: all 0.3s ease;
-
+  display: block;
 }
 
-.bg-s1 > img:hover{
+.bg-s1 > div > img:hover{
   scale: 1.02;
 }
 
@@ -98,7 +95,58 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
+
+.home_card_description{
+  font-size: 1rem;
+  width: 80%;
+}
+
 .m-l{
   margin-left: 2rem;
 }
+
+
+
+
+
+@media (max-width: 768px){
+
+  .grid-primary  {
+    width: 100vw;
+    height: 60vh; 
+  }
+  
+}
+
+@media (max-width: 640px){
+
+  .grid-primary  {
+    width: 100vw;
+    height: 60vh; 
+  }
+
+  .bg-s1{
+    height: 40vh;
+  }
+  
+  .home_card_description{
+    font-size: 0.8rem;
+    width: 80%;
+  }
+  
+}
+
+@media (max-width: 360px){
+  .home_card_description{
+    font-size: 0.7rem;
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
 

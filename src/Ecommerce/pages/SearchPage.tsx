@@ -39,7 +39,7 @@ const SearchPage = () => {
       :(
         <ListCard> 
        {filterProducts.slice(initialIndex,finalIndex).map(product => (
-        <Card  key={product.id} product={product}/>
+        <Card  key={product.id} product={product} classFont='search_card_font'/>
        ))}
       </ListCard>
       )}

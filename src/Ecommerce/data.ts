@@ -64,11 +64,5 @@ export const sideOptions = [
       text:"purcharses",
       path: "/user/purchases"
    },
-   {
-     id:6,
-     icon:  "bx bxs-moon",
-     text: "darkMode"
-   }
-
 
 ]

@@ -1,0 +1,27 @@
+.imgCard > img{
+ height: 100%;
+ transition: opacity 0.2s ease;
+}
+
+.imgCard{
+    position: relative;
+    cursor: pointer;
+}
+
+.imgCard > button {
+    position: absolute;
+    right: calc(50% - 18px);
+    top: calc(50% - 18px);
+    display: none;
+    z-index: 5000;
+}
+
+
+.imgCard:hover > img{
+    opacity: 0.5;
+}
+
+.imgCard:hover >  button {
+    display: block;
+    cursor: pointer;
+}

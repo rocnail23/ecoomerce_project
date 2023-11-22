@@ -13,14 +13,17 @@ export interface Register {
 
 
 
-export interface Product {
+export interface Product extends CreateProduct {
 
  id: number,
+ Images: Img[]
+
+}
+
+export interface CreateProduct {
  price: number,
  title: string,
  description: string,
- Images: {id:number,url:string}[]
-
 }
 
 
@@ -39,4 +42,11 @@ export interface User {
 export interface Message {
     message?: string,
     category?: string
+}
+
+export interface Img {
+
+    id:number,
+    url:string
+
 }
