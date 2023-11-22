@@ -19,7 +19,7 @@ const HomePage = () => {
         <div className="grid-primary">
         <Slider/>
         </div> 
-        <section >
+        <section  className="section_publicity">
           <h2 className="home_subtitle m-l">New Styles</h2>
         <div className="bg-s1">
           <div> <img src={s1} alt="" />  </div>
@@ -44,7 +44,7 @@ const HomePage = () => {
               classFont="home_card_description"/>
             ))}
         </SliderComponents>
-        <section >
+        <section className="section_publicity" >
           <h2 className="sub_title m-l">New Styles</h2>
         <div className="bg-s1">
           <div><img src={s4} alt="" /></div>
