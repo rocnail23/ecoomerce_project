@@ -12,9 +12,13 @@ interface Props{
 export const SliderComponents = ({children,gap,className}:Props) => {
 
  const {takeWidth,handleNext,handlePrev,container,item} = useSliderC()
+
+
  useLayoutEffect(() => {
   takeWidth()
- },[])
+ },[item.current])
+
+ 
 
  const {products} = useProduct()
 

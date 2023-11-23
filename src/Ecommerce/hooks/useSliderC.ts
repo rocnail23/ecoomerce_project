@@ -19,9 +19,7 @@ export const useSliderC = () => {
          
  const takeWidth = () => {
     if(!item.current) return
-    
     width.current = item.current!.offsetWidth 
-    console.log(item.current)
  }
 
  const handleNext = (array:Product[]) => {
@@ -30,7 +28,6 @@ export const useSliderC = () => {
      const items = array.length -  itemsInWindow
      const maxValue = items * width.current! 
      const translate = (currentIndex + 1) * width.current! 
-     
     if(maxValue < translate) return
      setCurrentIndex(value => value + 1)
      container.current!.style.transform = `translateX(-${translate}px)`

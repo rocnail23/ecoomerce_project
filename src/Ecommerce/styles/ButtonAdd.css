@@ -5,7 +5,9 @@
     align-items: center;
     border-radius: 50%;
     padding: 0.5rem;
+    justify-content: center;
     transition: all .3s ease;
+    border: 1px solid green;
 }
 
 .btn_add:hover{

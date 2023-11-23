@@ -3,7 +3,7 @@ import productSlice from './slices/product.slice'
 import cartSlice  from './slices/cart.slice'
 import  switchWish  from './slices/wish.slice'
 import authSlice from './slices/auth.slice'
-
+import purchaseSlice from './slices/purchase.slice'
 
 // ...
 export const store = configureStore({
@@ -11,11 +11,12 @@ export const store = configureStore({
    product: productSlice,
    cart: cartSlice,
    wishList: switchWish,
-   auth: authSlice
+   auth: authSlice,
+   purchase: purchaseSlice
   },
 })
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
+
 export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
+
 export type AppDispatch = typeof store.dispatch

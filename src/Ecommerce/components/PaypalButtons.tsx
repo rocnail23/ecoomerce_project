@@ -23,7 +23,7 @@ export const PaypalButton = () => {
 
 
     const createOrder = async() => {
-    const respond = await axios.post("http://localhost:4000/api/v1/orders",{priceCart:mount.toString()},{
+    const respond = await axios.post("http://localhost:4000/api/v1/orders",{priceCart:mount},{
         headers:{
             "Content-Type" : "application/json"
         }

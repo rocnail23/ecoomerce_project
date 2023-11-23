@@ -10,6 +10,7 @@ import useProduct from "../hooks/useProduct"
 import useCart from "../hooks/useCart"
 import { useEffect} from 'react';
 import { useAuth } from "../../Auth/hooks/useAuth"
+import { usePurchase } from "../hooks/usePurchase"
 
 
 
@@ -24,6 +25,7 @@ export const Ecommerce = () => {
   const {getProducts} = useProduct()
   const {getCart} = useCart()
   const {state} = useAuth()
+  const {getPurchase} = usePurchase()
   useEffect(() => {
    
     getProducts()
@@ -31,6 +33,7 @@ export const Ecommerce = () => {
     if(state != "authenticated") return
     getWishProducts()
     getCart()
+    getPurchase()
   },[state])
     
  

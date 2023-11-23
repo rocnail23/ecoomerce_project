@@ -4,7 +4,7 @@ import "../styles/ListCard.css"
 
 
 interface Props {
-  children: JSX.Element[] | JSX.Element
+  children?: JSX.Element[] | JSX.Element
   className?: string
 }
 

@@ -7,7 +7,7 @@ import { store } from './store/index.ts'
 import { PayPalScriptProvider} from "@paypal/react-paypal-js";
 
 const initialOptions = {
-  clientId: "AapK_VyurJbO53ZqJInelhRPNjKmO4sbpAA-jVMaxvdQRVhLLlo4uYM8-7AIMeW0yI8PgI8RRSb9H0er"
+  clientId: "AaDFMXGnqcdjutVC5tsp3ND89_JT0MsoNf5VDESYpoFZ-u8hx0fNd2RiGiPXMe_Q4YZaa8TVUouNuIIf"
 };
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

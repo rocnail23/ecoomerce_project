@@ -3,6 +3,7 @@ import "../styles/NavBarOptions.css"
 import useCart from "../hooks/useCart"
 import { useAuth } from "../../Auth/hooks/useAuth"
 import axiosClient from "../../apis/axiosclient"
+import { useState, useEffect } from 'react';
 
 
 const NavbarOptions = () => {
@@ -10,6 +11,20 @@ const NavbarOptions = () => {
   const {switchCard} = useCart()
   const navigate = useNavigate()
   const {state,sendMessageFromServer,startOnlogout} = useAuth()
+  const {productInCart} = useCart()
+  
+  const [totalProducts, setTotalProducts] = useState<number>(0) 
+
+  useEffect(() => {
+    setTotalProducts(() => {
+      let number:number = 0
+      for(let product in productInCart){
+         number += productInCart[product].quantity
+      }
+      return number
+    })
+  },[productInCart])
+
   
   const navigateToDashboard = () => {
     if(state != "authenticated"){
@@ -46,8 +61,9 @@ const NavbarOptions = () => {
         <button onClick={navigateToDashboard} className="btn-hover link">
         <i className='bx bx-user bx-sm'></i>
         </button>
-        <button onClick={switchCard}  className="btn-hover link" >
+        <button onClick={switchCard}  className="btn-hover link shopping_icon" >
         <i className='bx bxs-shopping-bag bx-sm'></i>
+        <span>{totalProducts}</span>
         </button>
     </div>
   )

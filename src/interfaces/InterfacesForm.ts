@@ -50,3 +50,7 @@ export interface Img {
     url:string
 
 }
+
+export interface Purchase {
+    products:{quantity:number,idPurchase:number}[]
+}

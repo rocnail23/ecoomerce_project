@@ -70,6 +70,10 @@ const useCart = () => {
         console.log(error)
        }
     }
+
+    const resetCart = async() => {
+        dispatch(setCart([]))
+    }
   
     return {
         plusCart,
@@ -80,7 +84,8 @@ const useCart = () => {
         priceCart,
         switchCard,
         getCart,
-        addtoCart
+        addtoCart,
+        resetCart
     }
 
 }

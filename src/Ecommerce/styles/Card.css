@@ -78,6 +78,8 @@
     margin-top: 0.5rem;
     font-size: 1rem;
     padding: 0 0.5rem;
+    height: 30px;
+    width: 30px;
 }
 
 .card_btnEdit{

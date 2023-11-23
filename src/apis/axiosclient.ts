@@ -1,7 +1,7 @@
 import axios from "axios"
-
+console.log(import.meta.env.VITE_URL_API)
 const axiosClient = axios.create({
-    baseURL:  "http://localhost:4000/api/v1"
+    baseURL: import.meta.env.VITE_URL_API
 })
 
 axiosClient.interceptors.request.use(config => {
