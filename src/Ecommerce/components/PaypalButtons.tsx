@@ -2,7 +2,6 @@ import { PayPalButtons , usePayPalScriptReducer } from "@paypal/react-paypal-js"
 import { usePaypal } from "../hooks/usePaypal";
 import { useAppSelector } from "../../store/hooks/redux-hooks";
 import { useEffect, useMemo } from 'react';
-import axios from "axios";
 import axiosClient from "../../apis/axiosclient";
 
 
