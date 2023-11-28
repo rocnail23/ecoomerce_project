@@ -1,7 +1,6 @@
 import { ButtonPurchase } from "../components/ButtonPurchase"
 import { ListCart } from "../components/ListCart"
 import useCart from "../hooks/useCart"
-import "../styles/CartPage.css"
 export const CartPage = () => {
 
   const {priceCart} = useCart()
