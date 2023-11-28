@@ -56,7 +56,7 @@ const HomePage = () => {
           <h3 className="titi">Simple. Classic.</h3>
           <p>And super naturally comfortable.</p>
           <div className="action_buttons">
-           <Link to="/user" reloadDocument> <button className="teko shop">shop</button></Link>
+           <Link to="/search" reloadDocument> <button className="teko shop">shop</button></Link>
           </div>
         </div>
         </section>

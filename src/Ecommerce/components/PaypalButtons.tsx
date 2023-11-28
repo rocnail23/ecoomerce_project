@@ -3,6 +3,7 @@ import { usePaypal } from "../hooks/usePaypal";
 import { useAppSelector } from "../../store/hooks/redux-hooks";
 import { useEffect, useMemo } from 'react';
 import axios from "axios";
+import axiosClient from "../../apis/axiosclient";
 
 
 export const PaypalButton = () => {
@@ -23,7 +24,7 @@ export const PaypalButton = () => {
 
 
     const createOrder = async() => {
-    const respond = await axios.post("http://localhost:4000/api/v1/orders",{priceCart:mount},{
+    const respond = await axiosClient.post("/orders",{priceCart:mount},{
         headers:{
             "Content-Type" : "application/json"
         }
