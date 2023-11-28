@@ -9,7 +9,7 @@ export const usePaypal = () => {
 
 
     function onApprove(data:any) {
-          return fetch(`http://localhost:4000/api/v1/orders/${data.orderID}/capture`, {
+          return fetch(`${import.meta.env.VITE_URL_API}/orders/${data.orderID}/capture`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const usePaypal = () => {
                 const respond = await axiosClient.post("/purchase")
                 resetCart()
                 startSetPurchase(respond.data)
-               console.log(respond)
+            
                 alert(`Transaction completed by ${name}`);
           });
 
