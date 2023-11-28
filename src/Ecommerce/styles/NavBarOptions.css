@@ -41,10 +41,11 @@
    background-color: black;
    color: white;
    border-radius: 50%;
-   padding: 0.2rem;
+   padding: 0.2rem 0.3rem;
    top:-5px;
    right:-10px;
    font-size: .7rem;
+   
  }
 
 
