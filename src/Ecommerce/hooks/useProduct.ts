@@ -77,10 +77,10 @@ const useProduct = () => {
     const startEditProduct = async(id:number,product:CreateProduct) => {
           try {
             const {data} = await axiosClient.put<Product>(`/product/${id}`,product)
-            dispatch(updateProduct(data))
+            dispatch(updateProduct())
             console.log(data)
           } catch (error) {
-            
+            console.log(error)
           }
     }
 

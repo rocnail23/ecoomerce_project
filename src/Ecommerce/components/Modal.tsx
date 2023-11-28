@@ -38,7 +38,7 @@ export default function ReactModal({closeModal,modalIsOpen}:Props) {
       try {
         
       if(product?.id){
-          startEditProduct(product.id,form)
+          await startEditProduct(product.id,form)
        }else{
         await startCreateProduct({...form})
        }

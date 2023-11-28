@@ -31,8 +31,8 @@ export const productSlice = createSlice({
    eliminateProduct: (state, {payload}:PayloadAction<number>) => {
         state.products = state.products.filter(product => product.id != payload)
    },
-   updateProduct: (state, {payload}:PayloadAction<Product>) => {
-      state.products = state.products.map(product => product.id == payload.id ? payload : product)
+   updateProduct: (state) => {
+     state.products = state.products.map(product => product.id == state.product?.id ? state.product : product)
    },
    setLoading: (state,{payload}:PayloadAction<boolean>) => {
     state.loading = payload
