@@ -19,7 +19,7 @@ export const WishesPage = () => {
       <hr className="m-b2" />
       <ListCard >
         {wishes.map(product => (
-         <Card key={product.id} vanish={true}  product={product}/>
+         <Card key={product.id} vanish={true}  product={product} classFont="search_card_font"/>
         ))}
       </ListCard>
     </div>

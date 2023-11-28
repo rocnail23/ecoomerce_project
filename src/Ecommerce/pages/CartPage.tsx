@@ -7,7 +7,7 @@ export const CartPage = () => {
   const {priceCart} = useCart()
 
   return (
-    <div className="cartPage animate__animated animate__fadeIn">
+    <div className="wishesPage animate__animated animate__fadeIn">
       <h3 className="title_3 teko">list Cart</h3>
       <hr  className="m-b2"/>
       <ListCart/>

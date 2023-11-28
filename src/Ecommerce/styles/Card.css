@@ -56,6 +56,7 @@
 .card_title{
     align-self: baseline;
     font-family: 'Titillium Web', sans-serif;
+    
 }
 
 .card_price{
@@ -114,5 +115,8 @@
         right: 0px;
         top: 0px;
     
+    }
+    .card_title{
+       font-size: 1.1rem;
     }
 }
