@@ -15,7 +15,7 @@ export default function ReactModal({closeModal,modalIsOpen}:Props) {
 
   if(!modalIsOpen) return
 
-  const {product,startCreateProduct,startEditProduct,startUploadImg} = useProduct()
+  const {product,startCreateProduct,startEditProduct,startUploadImg,startSetProduct} = useProduct()
   const {form, handleChange,handleFile,file,cleanFiles} = useForm(product)
   const {description,price,title} = form 
 
@@ -35,10 +35,12 @@ export default function ReactModal({closeModal,modalIsOpen}:Props) {
 
   const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
+     
       try {
         
       if(product?.id){
-          await startEditProduct(product.id,form)
+        startSetProduct({...form,id:product.id,Images:[...product.Images]})
+        await startEditProduct(product.id,form)
        }else{
         await startCreateProduct({...form})
        }

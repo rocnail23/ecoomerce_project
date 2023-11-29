@@ -4,7 +4,6 @@
     align-items: center;
     height: 100%;
     background-color: white;
-    padding-top: 0.5rem;
     cursor: pointer;
     position:relative;
     transition: opacity .3s ease;

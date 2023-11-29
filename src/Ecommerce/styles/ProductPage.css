@@ -92,7 +92,7 @@
         display: flex;
         height: 50vh;
         min-height: 400px;
-        gap: 10px;
+        
     }
     
     .productPage_info{
@@ -114,6 +114,7 @@
     .productPage{
         display: flex;
         flex-direction: column;
+        
     }
 
     .productPage_images{
@@ -133,6 +134,7 @@
         min-height: 300px;
         height: 20vh;
         flex-direction: column-reverse;
+        justify-content: space-between;
     }
 
 }

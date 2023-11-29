@@ -29,7 +29,7 @@ const useProduct = () => {
       
     }
 
-    const startSetProduct = (product?:Product) => {
+    const startSetProduct = async(product?:Product) => {
         dispatch( setProduct(product))
     }
 

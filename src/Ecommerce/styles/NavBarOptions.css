@@ -1,6 +1,7 @@
 .navOptions {
     display: flex;
     gap: 0.5rem;
+    position: relative;
 }
 
 
@@ -31,9 +32,9 @@
 }
 
 .shopping_icon{
-    position: fixed;
-    top: 20px;
-    right:30px
+    position: absolute;
+    right: -30px;
+    top: 2px
  }
 
  .shopping_icon > span{
@@ -50,15 +51,15 @@
 
 
 @media (max-width:460px){
-    .shopping_icon{
-        position: fixed;
-        top: 20px;
-        right:10px
-     }
 
      .navOptions {
       
         gap: 0.2rem;
     }
      
+    .shopping_icon{
+      
+        right: -27px;
+        
+     }
 }
